@@ -13,8 +13,8 @@ async function connect() {
 connect().then(() => {
 //   channel.deleteQueue("My-auth-service");
   channel.consume("My-auth-service", async (data: any) => {
-    channel.ackAll();
-    // channel.ack(data);
+    // channel.ackAll();
+    channel.ack(data);
     try {
       const token = JSON.parse(data?.content);
 

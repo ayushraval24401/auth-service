@@ -3,8 +3,7 @@ import express, { Request, Response } from "express";
 import mongoose from "mongoose";
 import UserModel from "./models/userModel";
 import bcrypt from "bcrypt";
-import jwt from "jsonwebtoken";
-import amqp, { Channel } from "amqplib";
+import jwt from "jsonwebtoken"; 
 import "./queues/verifyTokenQueue"
 
 const app = express();
